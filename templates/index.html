@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Review Sentiment Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: url('/static/images/movies.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        #splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(28, 28, 28, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            z-index: 10;
+            animation: fadeOut 1s ease-in-out 4s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        #main-content {
+            display: none;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1.title {
+            color: #ffd700;
+            text-shadow: 2px 2px 4px #000;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 2.3rem;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 650px;
+            margin: 20px auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 160px;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-clear {
+            background: #e74c3c;
+        }
+
+        .btn-clear:hover {
+            background: #c0392b;
+        }
+
+        .result {
+            margin-top: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #333;
+            text-align: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash">🎬 Movie Review Sentiment Analysis</div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1 class="title">🎥 Movie Review Sentiment Analysis 🎞️</h1>
+
+        <form method="post" action="/predict">
+            <textarea name="review" placeholder="Type your review here...">{{ review or '' }}</textarea>
+            <div class="button-group">
+                <input type="submit" value="Analyze" class="btn">
+                <input type="reset" value="Clear" class="btn btn-clear">
+            </div>
+        </form>
+
+        {% if sentiment %}
+        <div class="result">
+            {% if sentiment == 'positive' %}
+                <h2 class="positive">😊 Positive Sentiment</h2>
+                <div class="emoji">🌟🎉👍</div>
+            {% elif sentiment == 'negative' %}
+                <h2 class="negative">😢 Negative Sentiment</h2>
+                <div class="emoji">💔😭👎</div>
+            {% else %}
+                <h2>😐 Neutral Sentiment</h2>
+                <div class="emoji">🤔📉</div>
+            {% endif %}
+            <h3>Confidence: {{ confidence }}</h3>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Show main content after splash screen
+        setTimeout(function () {
+            document.getElementById('main-content').style.display = 'block';
+        }, 5000);
+    </script>
+
+</body>
+</html>
