@@ -33,7 +33,7 @@ The goal of this project is to automatically detect the **sentiment of movie rev
 ---
 
 ## 📂 Project Structure
-'''
+```plaintext
 project_root/
 ├── app.py # Flask backend to serve predictions
 ├── main.py # Script for training and evaluating the model
@@ -48,6 +48,5 @@ project_root/
 │ └── movies.png # Background image or emoji-related media
 ├── templates/
 │ └── index.html # Frontend UI (rendered with Flask)
-
-'''
+```
 
