@@ -134,7 +134,7 @@ The model effectively captures emotional and sentimental tones in real reviews.
 
 ## 🎥 Demo Video
 
-👉 [Watch Demo](https://drive.google.com/file/d/1NQMG2gWGxaEhVGaWIMsSuAcD-ED6rWad/view?usp=drive_link)
+👉 [Watch Demo](https://drive.google.com/file/d/1NQMG2gWGxaEhVGaWIMsSuAcD-ED6rWad/view?usp=sharing)
 
 
 ## 🧠 Model Architecture
