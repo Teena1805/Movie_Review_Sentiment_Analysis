@@ -32,32 +32,6 @@ The goal of this project is to automatically detect the **sentiment of movie rev
 
 ---
 
-## 📂 Project Structure
-```plaintext
-project_root/
-├── app.py # Flask backend to serve predictions
-├── main.py # Script for training and evaluating the model
-├── data/
-│ └── IMDB_Dataset.csv # Dataset with 50,000 reviews
-├── model/
-│ ├── lstm_sentiment_model.h5 # Trained LSTM model
-│ ├── tokenizer.joblib # Tokenizer for preprocessing
-│ └── label_encoder.joblib # Label encoder
-├── static/
-│ └── images/
-│ └── movies.png # Background image or emoji-related media
-├── templates/
-│ └── index.html # Frontend UI (rendered with Flask)
-```
-
----
-
-## 🎯 Objective
-
-To create a system that automatically detects the **sentiment** (positive or negative) of movie reviews using **Natural Language Processing (NLP)** and **Deep Learning**, and provides a clean, interactive web interface for real-time analysis.
-
----
-
 ## 🛠️ Technologies Used
 
 ### 🔹 Frontend
@@ -85,6 +59,18 @@ To create a system that automatically detects the **sentiment** (positive or neg
 | ROC AUC    | 93.85%   |
 
 ---
+# Getting Started
+## Prerequisites
+Make sure the following are installed:
+
+Python 3.10+
+
+pip (Python package manager)
+
+Git
+
+Virtual Environment (recommended)
+---
 
 ## 🚀 How to Run This Project
 
@@ -94,7 +80,23 @@ To create a system that automatically detects the **sentiment** (positive or neg
 git clone https://github.com/Teena1805/Movie_Review_Sentiment_Analysis.git
 cd movie-review-sentiment-analysis
 ```
-### Step 2: Install Dependencies
+### 2. **(Optional) Create and activate a virtual environment:**
+
+For **macOS/Linux**:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+For **Windows**:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+---
+### Step 3: Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -102,7 +104,7 @@ If requirements.txt is not available, install manually:
 ```bash
 pip install flask tensorflow pandas numpy scikit-learn joblib
 ```
-### Step3: Train the Model (Optional, if not using the existing model)
+### Step4: Train the Model (Optional, if not using the existing model)
 ```bash
 python main.py
 ```
@@ -110,19 +112,39 @@ This creates:
 - model/lstm_sentiment_model.h5
 - model/tokenizer.joblib
 - model/label_encoder.joblib
-### Step 4: Run the Web App
+### Step 5: Run the Web App
 ```bash
 python app.py
 ```
-### Step5: Now, open your browser and go to:
+### Step6: Now, open your browser and go to:
 ```bash
 http://127.0.0.1:5000/
+```
+---
+## 📂 Project Structure
+```plaintext
+project_root/
+├── app.py # Flask backend to serve predictions
+├── main.py # Script for training and evaluating the model
+├── data/
+│ └── IMDB_Dataset.csv # Dataset with 50,000 reviews
+├── model/
+│ ├── lstm_sentiment_model.h5 # Trained LSTM model
+│ ├── tokenizer.joblib # Tokenizer for preprocessing
+│ └── label_encoder.joblib # Label encoder
+├── static/
+│ └── images/
+│ └── movies.png # Background image or emoji-related media
+├── templates/
+│ └── index.html # Frontend UI (rendered with Flask)
 ```
 ---
 ##📷 Example Usage
 ```
 "I can't hold my tears after watching the climax."
-
+```
 ✅ Predicted Sentiment: Positive
 🎯 Confidence Score: 92.31%
-```
+
+
+
