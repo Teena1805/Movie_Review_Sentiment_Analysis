@@ -93,4 +93,24 @@ To create a system that automatically detects the **sentiment** (positive or neg
 ```bash
 git clone https://github.com/Teena1805/Movie_Review_Sentiment_Analysis.git
 cd movie-review-sentiment-analysis
-
+```
+### Step 2: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+If requirements.txt is not available, install manually:
+```bash
+pip install flask tensorflow pandas numpy scikit-learn joblib
+```
+### Step3: Train the Model (Optional, if not using the existing model)
+```bash
+python main.py
+```
+This creates:
+-model/lstm_sentiment_model.h5
+-model/tokenizer.joblib
+-model/label_encoder.joblib
+### Step 4: Run the Web App
+```bash
+python app.py
+```
