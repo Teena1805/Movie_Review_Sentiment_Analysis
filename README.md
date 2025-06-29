@@ -33,4 +33,21 @@ The goal of this project is to automatically detect the **sentiment of movie rev
 ---
 
 ## 📂 Project Structure
+'''
+project_root/
+├── app.py # Flask backend to serve predictions
+├── main.py # Script for training and evaluating the model
+├── data/
+│ └── IMDB_Dataset.csv # Dataset with 50,000 reviews
+├── model/
+│ ├── lstm_sentiment_model.h5 # Trained LSTM model
+│ ├── tokenizer.joblib # Tokenizer for preprocessing
+│ └── label_encoder.joblib # Label encoder
+├── static/
+│ └── images/
+│ └── movies.png # Background image or emoji-related media
+├── templates/
+│ └── index.html # Frontend UI (rendered with Flask)
+
+'''
 
