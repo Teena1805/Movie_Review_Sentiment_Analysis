@@ -125,9 +125,10 @@ Here’s a sample prediction made by the model:
 **🎯 Confidence Score**: `91.47%`
 The model effectively captures emotional and sentimental tones in real reviews.
 
-## 🚀 Live Demo
+## 🎥 Demo Video
 
-*(Optional — add link if hosted on Heroku, Render, or locally hosted demo GIF)*
+👉 [Watch Demo](https://drive.google.com/file/d/1NQMG2gWGxaEhVGaWIMsSuAcD-ED6rWad/view?usp=drive_link)
+
 
 ## 🧠 Model Architecture
 
