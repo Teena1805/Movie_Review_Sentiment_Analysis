@@ -50,3 +50,47 @@ project_root/
 │ └── index.html # Frontend UI (rendered with Flask)
 ```
 
+---
+
+## 🎯 Objective
+
+To create a system that automatically detects the **sentiment** (positive or negative) of movie reviews using **Natural Language Processing (NLP)** and **Deep Learning**, and provides a clean, interactive web interface for real-time analysis.
+
+---
+
+## 🛠️ Technologies Used
+
+### 🔹 Frontend
+- **HTML5** + **Jinja2 templates**
+- **CSS** (via `style.css` if present)
+- **Image assets** from `/static/images/` (`movies.png`)
+
+### 🔹 Backend
+- **Flask** for serving the web app
+- **TensorFlow + Keras** for building the LSTM model
+- **Scikit-learn** for evaluation metrics
+- **Pandas / NumPy** for data handling
+- **Joblib** for saving/loading tokenizer and encoders
+
+---
+
+## 📊 Model Performance
+
+| Metric     | Value    |
+|------------|----------|
+| Accuracy   | 87.13%   |
+| Precision  | 86.74%   |
+| Recall     | 87.89%   |
+| F1-Score   | 87.31%   |
+| ROC AUC    | 93.85%   |
+
+---
+
+## 🚀 How to Run This Project
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Teena1805/Movie_Review_Sentiment_Analysis.git
+cd movie-review-sentiment-analysis
+
