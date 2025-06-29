@@ -107,9 +107,9 @@ pip install flask tensorflow pandas numpy scikit-learn joblib
 python main.py
 ```
 This creates:
--model/lstm_sentiment_model.h5
--model/tokenizer.joblib
--model/label_encoder.joblib
+- model/lstm_sentiment_model.h5
+- model/tokenizer.joblib
+- model/label_encoder.joblib
 ### Step 4: Run the Web App
 ```bash
 python app.py
