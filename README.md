@@ -114,3 +114,15 @@ This creates:
 ```bash
 python app.py
 ```
+### Step5: Now, open your browser and go to:
+```bash
+http://127.0.0.1:5000/
+```
+---
+##📷 Example Usage
+```
+"I can't hold my tears after watching the climax."
+
+✅ Predicted Sentiment: Positive
+🎯 Confidence Score: 92.31%
+```
