@@ -11,6 +11,7 @@ The goal of this project is to automatically detect the **sentiment of movie rev
 - Moderating review platforms
 - Monitoring social media or comment sections
 
+
 ## 📌 Features
 
 - ✅ Accepts custom movie review text
@@ -36,6 +37,7 @@ The goal of this project is to automatically detect the **sentiment of movie rev
 - **Pandas / NumPy** for data handling
 - **Joblib** for saving/loading tokenizer and encoders
 
+
 # Getting Started
 ## Prerequisites
 Make sure the following are installed:
@@ -43,6 +45,7 @@ Make sure the following are installed:
 - pip (Python package manager)
 - Git
 - Virtual Environment(recommended)
+
 
 ## 📂 Project Structure
 ```plaintext
@@ -61,6 +64,7 @@ project_root/
 ├── templates/
 │ └── index.html # Frontend UI (rendered with Flask)
 ```
+
 ## 🚀 How to Run This Project
 
 ### Step 1: Clone the Repository
@@ -122,8 +126,11 @@ Here’s a sample prediction made by the model:
 > "I just can't hold my tears after watching the climax scene. Truly emotional!"
 
 **✅ Predicted Sentiment**: `Positive`  
+
 **🎯 Confidence Score**: `91.47%`
+
 The model effectively captures emotional and sentimental tones in real reviews.
+
 
 ## 🎥 Demo Video
 
@@ -139,6 +146,7 @@ The model effectively captures emotional and sentimental tones in real reviews.
 
 This architecture is best for sentiment analysis because it handles long sequences and preserves contextual meaning over time.
 
+
 ## 📈 Model Performance
 
 | Metric       | Score     |
@@ -151,6 +159,7 @@ This architecture is best for sentiment analysis because it handles long sequenc
 
 These scores are based on a dataset of 50,000 IMDB reviews.
 
+
 ## 🛠 Future Improvements
 
 - Implement BERT or Transformer-based models for improved accuracy
@@ -158,6 +167,7 @@ These scores are based on a dataset of 50,000 IMDB reviews.
 - Include a dashboard for visualizing sentiment trends
 - Deploy the model using Docker and host on cloud (e.g., AWS, Heroku)
 - 
+
 ## 💬 Feedback & Contributing
 
 Feel free to:
@@ -166,6 +176,7 @@ Feel free to:
 - 📩 Submit a pull request if you'd like to contribute
 
 Your support is appreciated!
+
 
 ## 📝 License
 
